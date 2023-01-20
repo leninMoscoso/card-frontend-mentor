@@ -64,7 +64,7 @@ body {
   font-size: 14px;
 }
 
-.container {
+main {
   margin: 0 1rem;
   background-color: #fff;
   border-radius: 0.6rem;
@@ -141,8 +141,7 @@ span {
 
 /*DESKTOP*/
 @media (min-width: 800px) {
-  .container {
-    /* width: 35rem; */
+  main {
     display: grid;
     grid-template-areas: "picture details";
   }
