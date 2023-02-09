@@ -1,12 +1,12 @@
 :root {
   /* Primary */
-  --Dark-cyan: hsl(158, 36%, 37%);
-  --Cream: hsl(30, 38%, 92%);
+  --Dark-cyan: #3c8067;
+  --Cream: #f2ebe3;
 
   /* Neutral */
-  --Very-dark-blue: hsl(212, 21%, 14%);
-  --Dark-grayish-blue: hsl(228, 12%, 48%);
-  --White: hsl(0, 0%, 100%);
+  --Very-dark-blue: #1c232b;
+  --Dark-grayish-blue: #6c7289;
+  --White: #ffffff;
 
   /* Fonts */
   --Fraunces: "Fraunces", serif;
@@ -57,120 +57,131 @@ h6 {
   overflow-wrap: break-word;
 }
 
+/*******************************************************/
+
 body {
-  display: grid;
-  place-items: center;
   background-color: var(--Cream);
-  font-size: 14px;
+  display: grid;
+  place-content: center;
 }
 
-main {
+.main {
   margin: 0 1rem;
-  background-color: #fff;
-  border-radius: 0.6rem;
+  border-radius: .6rem;
   overflow: hidden;
+  background-color: #fff;
 }
 
-.details {
-  display: flex;
-  flex-direction: column;
+.section{
+  /* background-color: aqua; */
   padding: 1.5rem;
 }
 
-.perfum {
-  font-family: var(--Montserrat);
-  color: #74747c;
-  font-size: 0.8rem;
-  letter-spacing: 0.3rem;
-  margin-bottom: 0.6rem;
+.section > * + * {
+  margin-top: 1rem;
 }
 
-.gabrielle {
+.section__h1{
+  /* background-color: bisque; */
+  color: var(--Dark-grayish-blue);
+  font-family: var(--Montserrat);
+  font-size: .9rem;
+  font-weight: 100;
+  letter-spacing: 3px;
+}
+
+.section__h2{
+  /* background-color: chocolate; */
   font-family: var(--Fraunces);
-  font-size: 2rem;
+  font-size: clamp(2em, 4vh, 2.2em);
   line-height: 2rem;
-  color: black;
-  margin-bottom: 1rem;
 }
 
-.description {
-  font-family: var(--Montserrat);
+.section__description{
+  /* background-color: darkmagenta; */
   color: var(--Dark-grayish-blue);
-  margin-bottom: 1rem;
+  font-family: var(--Montserrat);
+  font-size: clamp(.9rem, 4vh, 1rem);
 }
 
-.prices {
+.prices{
+  /* background-color: forestgreen; */
+  color: var(--Dark-cyan);
   font-family: var(--Fraunces);
   font-size: 2rem;
-  color: var(--Dark-cyan);
-  position: relative;
-  margin-bottom: 0.7rem;
-}
-
-span {
-  font-family: var(--Montserrat);
-  font-size: 0.8rem;
-  color: var(--Dark-grayish-blue);
-  margin-left: 0.7rem;
-  display: block;
-  position: absolute;
-  top: 1rem;
-  left: 8.4rem;
-}
-
-.button-content {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 1.5rem;
+}
+
+span{
+  /* background-color: saddlebrown; */
+  color: var(--Dark-grayish-blue);
+  font-family: var(--Montserrat);
+  font-size: 1rem;
+}
+
+.button{
   background-color: var(--Dark-cyan);
-  height: 3rem;
-  border-radius: 0.5rem;
+  color: #fff;
+  margin-top: 1rem;
+  border-radius: .5rem;
+  min-height: 3.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 
-.button-content > a {
-  font-family: var(--Montserrat);
+.button:hover {
+  background-color: #023b28;
+}
+
+.button__icon{
+  height: 20px;
+}
+
+.button__a{
   color: #fff;
-  font-weight: 700;
+  font-family: var(--Montserrat);
   text-decoration: none;
+  margin-top: .2px
 }
 
-.button-content > img {
-  margin-right: 0.5rem;
-}
+@media (min-width: 712px) {
 
-/*DESKTOP*/
-@media (min-width: 800px) {
-  main {
-    display: grid;
-    grid-template-areas: "picture details";
-  }
+    .main {
+      display: grid;
+      grid-template-areas: "picture section";
 
-  picture {
-    grid-area: picture;
-    width: 18.7rem;
-  }
+      width: min(100% - 1rem, 83ch);
+      margin-inline: auto;
+    }
 
-  .details {
-    grid-area: details;
-    width: 18.7rem;
-    padding: 2rem;
-  }
+    .picture {
+      width: 21rem;
+    }
 
-  .perfum {
-    margin-bottom: 1rem;
-  }
+    .section {
+      padding: 2rem;
+    }
 
-  .gabrielle {
-    margin-bottom: 1.6rem;
-  }
+    .section__h2 {
+      width: 15rem;
+      margin-top: 1.5rem;
+    }
 
-  .description {
-    line-height: 1.4rem;
-  }
+    .section__description {
+      margin-top: 2rem;
+    }
 
-  .prices,
-  .button-content {
-    margin-top: 0.5rem;
-  }
+    .prices {
+      margin-top: 2rem;
+    }
+
+    .button {
+      margin-top: 1.8rem;
+      width: 16.5rem;
+    }
 }
