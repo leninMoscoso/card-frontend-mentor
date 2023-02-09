@@ -73,7 +73,6 @@ body {
 }
 
 .section{
-  /* background-color: aqua; */
   padding: 1.5rem;
 }
 
@@ -82,7 +81,6 @@ body {
 }
 
 .section__h1{
-  /* background-color: bisque; */
   color: var(--Dark-grayish-blue);
   font-family: var(--Montserrat);
   font-size: .9rem;
@@ -91,21 +89,18 @@ body {
 }
 
 .section__h2{
-  /* background-color: chocolate; */
   font-family: var(--Fraunces);
   font-size: clamp(2em, 4vh, 2.2em);
   line-height: 2rem;
 }
 
 .section__description{
-  /* background-color: darkmagenta; */
   color: var(--Dark-grayish-blue);
   font-family: var(--Montserrat);
   font-size: clamp(.9rem, 4vh, 1rem);
 }
 
 .prices{
-  /* background-color: forestgreen; */
   color: var(--Dark-cyan);
   font-family: var(--Fraunces);
   font-size: 2rem;
@@ -115,7 +110,6 @@ body {
 }
 
 span{
-  /* background-color: saddlebrown; */
   color: var(--Dark-grayish-blue);
   font-family: var(--Montserrat);
   font-size: 1rem;
